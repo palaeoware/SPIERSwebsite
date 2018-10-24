@@ -1,2 +1,2 @@
 2.20
-http://www.spiers-software.org/spiers_2.20_setup.exe
+https://www.spiers-software.org/downloads/binaries/spiers_2.20_setup.exe

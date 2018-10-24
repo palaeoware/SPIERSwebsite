@@ -1,2 +1,2 @@
 2.14
-http://www.spiers-software.org/spiers_osx_214.pkg
+https://www.spiers-software.org/downloads/binaries/spiers_osx_214.pkg

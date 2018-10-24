@@ -1,0 +1,487 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=windows-1250">
+    <title>SPIERS Software</title>
+    <link href="css/index.css" rel="stylesheet" type="text/css"/>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <script type="text/javascript">
+        <!--
+        //<![CDATA[
+        function swapimage(idofimg, filename) {
+            document.images[idofimg].src = filename;
+        }
+        //]]
+        -->
+    </script>
+</head>
+
+<body>
+<div id="container">
+    <p class="cent"><img src="images/SPIERS.jpg" alt="SPIERS software suite - official website"/></p>
+    <p class="cent">
+        <a href="index.htm"><img src="images/home.png" alt="Home" id="home" onmouseover="swapimage('home','images/homeR.png');" onmouseout="swapimage('home','images/home.png');"/></a>
+        <a href="download.htm"><img src="images/download.png" alt="Download" id="download" onmouseover="swapimage('download','images/downloadR.png');" onmouseout="swapimage('download','images/download.png');"/></a>
+        <a href="changes.htm"><img src="images/changes.png" alt="Changes" id="changes" onmouseover="swapimage('changes','images/changesR.png');" onmouseout="swapimage('changes','images/changes.png');"/></a>
+        <a href="VAXML.htm"><img src="images/VAXML.png" alt="VAXML" id="VAXML" onmouseover="swapimage('VAXML','images/VAXMLR.png');" onmouseout="swapimage('VAXML','images/VAXML.png');"/></a>
+        <a href="contact.htm"><img src="images/contact.png" alt="Contact" id="contact" onmouseover="swapimage('contact','images/contactR.png');" onmouseout="swapimage('contact','images/contact.png');"/></a>
+    </p>
+
+    <h2>SPIERS update history</h2>
+    <p>
+        <br/>
+        2.20 [This version]<br/>
+        <br/>
+        All - 32-bit version has been discontinued - this release and all future Windows releases will be 64-bit only.<br/>
+        All - Ported to Qt 5.1<br/>
+        <br/>
+        SPIERSedit<br/>
+        ------------<br/>
+        - New 'export working image set' command<br/>
+        <br/>
+        <br/>
+        SPIERSAlign<br/>
+        ---------- <br/>
+        <br/>
+        <br/>
+        SPIERSView<br/>
+        ----------<br/>
+        <br/>
+        - Re-write of rendering code to use modern vertex-buffer object based OpenGL; surfaces are now rendered with specular reflections, which produce higher-quality visualizations. In most cases performance should be similar to old versions.<br/>
+        - 'Shininess' is now a modifiable parameter for all objects - settings are off (Matte - as old renderer), less, default, and full. Custom settings of values 0 (off) to 100 (full) are also supported.<br/>
+        - Custom settings are now available for Transparency (as a percentage), Island Removal (the minimum number of triangles in an island to be retained), and Smoothing (the number of iterations of the smoothing algorithm). <br/>
+        - Scale-grid code has been re-written - the 'edges' of the grid should no longer be visible in any display mode<br/>
+        - The 'Scale ball', a feature essentially superseded by the scale grid, has been removed<br/>
+        - A new 'bounding box' view has been introduced, displaying objects simply as wireframe boxes. This may assist in the placement of large and 'heavy' objects<br/>
+        - The right-hand of the status bar now reports the triangle count for selected objects (or the whole model if nothing is selected), and also reports a volume for selected objects. The latter is based on raw tomograms, so is not affected by island removal or smoothing. Volume is not available for VAXML or SPVF files (which do not include raw tomogram data).<br/>
+        - Menus - Transparency, Island Removal, Smoothing and Shininess settings have been placed within submenus<br/>
+        - Note - the new Transparency model is slightly different to the old one, but suffers similar issues - in particular viewing translucent objects through other translucent objects may produce odd effects. These problems are not soluble with any high-speed renderer - if you require high-quality transparency, export models to a ray-tracing application.<br/>
+        - Added a 'Steps...' button for multiple steps to animation panel, plus a checkbox to indicate whether images should be saved or not<br/>
+        <br/>
+        2.15<br/>
+        <br/>
+        Installer<br/>
+        ------------<br/>
+        - Installers for 32-bit and 64-bit versions combined into a single installer, which automatically installs the 64-bit version on 64-bit systems and the 32-bit version on 32-bit systems<br/>
+        - Installer now puts SPIERSview into the start menu<br/>
+        <br/>
+        SPIERSedit<br/>
+        ------------<br/>
+        <br/>
+        <br/>
+        SPIERSAlign<br/>
+        ---------- <br/>
+        <br/>
+        <br/>
+        SPIERSView<br/>
+        ----------<br/>
+        - New animation system added - see SPIERSview manual, p.12<br/>
+        - Autospin could destroy relative object positioning on Export on previous versions; it is now automatically disabled by most commands, including exports.<br/>
+        - VAXML now handles special (e.g. accented) characters. All VAXML files created by this version of SPIERS with such characters are in fact readable on old versions of SPIERS too (bug was in export). <br/>
+        <br/>
+        ---------------------------------------------------------------------------------------<br/>
+        <br/>
+        2.14<br/>
+        <br/>
+        SPIERSedit<br/>
+        ------------<br/>
+        - Added new column in curves toolbox to reports the slices the curve is present on <br/>
+        - Addedd new menu item to grey out curve items not present on current slice<br/>
+        <br/>
+        SPIERSAlign<br/>
+        ----------<br/>
+        <br/>
+        SPIERSView<br/>
+        ----------<br/>
+        - Mouse wheel now zooms in and out<br/>
+        - Menu items added to change colour of grid lines (which are also saved in spv files)<br/>
+        - Importing SPV objects exported from SPIERSedit without a key assigned now correctly appear as [-] <br/>
+        <br/>
+        All - updater now checks for download problems with relating to firewalls/virus checkers where downloaded file doesn't write properly, and issues a warning
+        <br/>
+        <br/>
+        ---------------------------------------------------------------------------------------<br/>
+        <br/>
+        2.13<br/>
+        <br/>
+        SPIERSedit<br/>
+        ------------<br/>
+        <br/>
+        - Creation of a default output object for new datasets now functions correctly <br/>
+        - 'Segment brush applies masks' now works correctly<br/>
+        <br/>
+        <br/>
+        SPIERSAlign<br/>
+        ----------<br/>
+        - Autoalign now works with greyscale as well as RGB images.<br/>
+        <br/><br/>
+        SPIERSView<br/>
+        ----------<br/>
+        - Added Quick Help item<br/>
+        - VAXML now support PLY files as alternative to STL. These can incorporate colour vertex information (e.g. from laser scans). <br/>
+        - Screen capture bug fixed (now updates scene before capture<br/>
+        - Added scale grid mode<br/>
+        - Added orthographic mode<br/>
+        - Added move towards/away commands ([, ]), also large move towards/away<br/>
+        - Added large rotate commands (shift/arrows)<br/>
+        <br/>
+        <br/>
+        ---------------------------------------------------------------------------------------<br/>
+        <br/>
+        2.12<br/>
+        ---------<br/>
+        <br/>
+        Fixed updater bug in 64-bit version
+        <br/>
+        <br/>
+        SPIERSEdit <br/>
+        ---------- <br/>
+        <br/>
+        - No changes <br/>
+
+        <br/>
+        SPIERSAlign<br/>
+        ---------- <br/>
+        <br/>
+        - No changes <br/>
+        <br/>
+        SPIERSView <br/>
+        ----------<br/>
+        <br/><br/>
+        - Fixed bug where scale was not being imported correctly from SPIERSedit
+    </p>
+    <hr/>
+    <p>2.11<br/>
+        ---------<br/>
+        <br/>
+        All: 'Manual' command added to help menu to invoke the PDF manual.<br/>
+        <br/>
+        SPIERSEdit<br/>
+        ----------<br/>
+        <br/>
+        - No changes<br/>
+        <br/>
+        SPIERSAlign<br/>
+        ----------<br/>
+        <br/>
+        - No changes<br/>
+        <br/>
+        SPIERSView<br/>
+        ----------<br/>
+        <br/>
+        - New command added to allow users to change background colour from the default black<br/>
+        - SPIERSview now resizes VAXML datasets so they initially display in the centre of the screen at a sensible scale<br/>
+        - Bug fixed where the Save Changes command reverted presurfaced SPVs to compact format<br/>
+    </p>
+    <hr/>
+    <p>
+        2.10<br/>
+        <br/>
+        <br/>
+        SPIERSEdit<br/>
+        ----------<br/>
+        <br/>
+        - Fixed bug in Polynomial generation associated with sample
+        definition<br/>
+        - Fixed bug that could cause crashes in masks and segments panels when
+        attempting to move multiple masks up or down<br/>
+        - A default output object is now created with a new dataset<br/>
+        - New version of PDF manual added superceding old version 1 manual<br/>
+        <br/>
+        <br/>
+        SPIERSAlign<br/>
+        ----------<br/>
+        <br/>
+        - No changes to software<br/>
+        - New version of PDF manual added<br/>
+        <br/>
+        <br/>
+        SPIERSView<br/>
+        ----------<br/>
+        <br/>
+        - Copyright system for VAXML files added<br/>
+        - Performance tweaks<br/>
+    </p>
+    <hr/>
+    <p>
+        2.09<br/>
+        <br/>
+        <br/>
+        SPIERSEdit<br/>
+        ----------<br/>
+        <br/>
+        - No changes<br/>
+        <br/>
+        <br/>
+        SPIERSAlign<br/>
+        ----------<br/>
+        <br/>
+        - No changes<br/>
+        <br/>
+        <br/>
+        SPIERSView<br/>
+        ----------<br/>
+        <br/>
+        - Critical bug fixed (2.08 corrupted files on save to spv format)<br/>
+        - Framerate added to bottom left of status bar<br/>
+    </p>
+    <hr/>
+    <p>
+        2.08<br/>
+        <br/>
+        <br/>
+        SPIERSEdit<br/>
+        ----------<br/>
+        <br/>
+        - No changes<br/>
+        <br/>
+        <br/>
+        SPIERSAlign<br/>
+        ----------<br/>
+        <br/>
+        - No changes<br/>
+        <br/>
+        <br/>
+        SPIERSView<br/>
+        ----------<br/>
+        <br/>
+        - Various minor bugfixes and GUI tweaks<br/>
+        - Draft version of new manual included<br/>
+    </p>
+    <hr/>
+    <p>
+        2.07<br/>
+        <br/>
+        All: Auto-updater now downloads new installers itself rather than
+        relying on web-browser (IE had problems with this)<br/>
+        <br/>
+        <br/>
+        SPIERSEdit<br/>
+        ----------<br/>
+        <br/>
+        - No changes<br/>
+        <br/>
+        <br/>
+        SPIERSAlign<br/>
+        ----------<br/>
+        <br/>
+        - No changes<br/>
+        <br/>
+        <br/>
+        SPIERSView<br/>
+        ----------<br/>
+        <br/>
+        - Problem with missing DLLs in installers (disabling VAXML export)
+        fixed<br/>
+        - GUI rearranged so progress bars and clip controls are in panels
+        (dockers)<br/>
+        - Ktr now reported consistently in status bar<br/>
+        - Scale for scaleball now only appears when scale ball is visible<br/>
+        - Antialiasing works properly in VAXML/SPVF mode now<br/>
+        - Minor other bugfixes<br/>
+    </p>
+    <hr/>
+    <p>
+        2.06<br/>
+        <br/>
+        <br/>
+        SPIERSEdit<br/>
+        ----------<br/>
+        <br/>
+        - No changes<br/>
+        <br/>
+        <br/>
+        SPIERSAlign<br/>
+        ----------<br/>
+        <br/>
+        - Autosave option added (on by default) - saves the setting file every
+        time any transformation action is performed, to prevent data loss in
+        the event of a crash<br/>
+        - Log added - this creates a log file which is constantly updated for
+        debugging purposes.<br/>
+        - Minor bug fixes<br/>
+        <br/>
+        <br/>
+        SPIERSView<br/>
+        ----------<br/>
+        <br/>
+        Major changes, including:<br/>
+        <br/>
+        - Menus have been rearranged into a more logical and practical
+        format<br/>
+        - Function of the 'clip zoom' and 'normal zoom' sliders reversed; the
+        normal is now just a zoom, the clip zoom moves model towards/away<br/>
+        - New stereo-viewing option for 'Quad Buffer' Stereo added to provide
+        support for 3D screens and projectors<br/>
+        - SPIERSview now understands scale! A scale-ball is supplied in the
+        scale menu, and it's size reported bottom right of the window.<br/>
+        - Several menu commands created to manipulate scale ball - can move,
+        resize, recolour etc.<br/>
+        - Fidelity reduction now uses either simple (default) or 'quadric' mode
+        - the latter is slower, more crash-prone, but produces better
+        results<br/>
+        - VAXML export implemented (replacing STL export); exports model as
+        series of STL files and a VAXML file with metadata<br/>
+        - Finalised file mode (.spvf files) implemented; produces large but
+        very fast loading files that run in minimal mode (see below)<br/>
+        - Descriptive text system ('info' box) created to allow models to be
+        tagged with comments, authors, classification etc.<br/>
+        - New 'minimal' (view-only) mode implemented for vaxml and spvf files -
+        in this mode the user cannot alter the model in any way.<br/>
+        - Minor bug fixes.<br/>
+    </p>
+    <hr/>
+    <p>
+        2.05<br/>
+        <br/>
+        SPIERSEdit<br/>
+        ----------<br/>
+        <br/>
+        - Front-to-back checkbox now part of New dialog, and by default is
+        true.<br/>
+        - Zoom scroll bar added to edit, similar to that on view. Zoom type-in
+        box moved from toolbar<br/>
+        - STL export fixed (broken in 2.04)<br/>
+        - Keyboard shorcuts (space, zoom, back/forward a slice) now work even
+        while focus is in a type-in number 'spin box' (e.g. the slice
+        positioning box)<br/>
+        - Added a 'select all' button to the slice selector<br/>
+        - Some spurious UI elements removed (e.g. unimplemented 3D brush
+        features on toolbar)<br/>
+        <br/>
+        <br/>
+        SPIERSAlign<br/>
+        ----------<br/>
+        <br/>
+        - Minor bug fixes<br/>
+        <br/>
+        - Auto align feature introduded<br/>
+        <br/>
+        Auto aligns a dataset from two non-parallel fiduciary edges. A new
+        toolbox is open in the left docking area when a dataset is loaded.
+        Prior to running the process click setup; this displays two boxes on
+        the image, one horizontal and one vertical. These should be placed over
+        the edge on which the alignment is to be performed by resizing,
+        dragging and rotating them, until they cover as much of the edge as
+        possible on every image without overshooting a corner on any of them.
+        Neither box should be rotated more than sixty degrees from their
+        original position. They can overlap the image edges but not be placed
+        entirely off the image at any point. When this is done click setup
+        again, highlight the slices you want to align in the Auto Align
+        selection box, and click Align. The selected slices will be aligned
+        against the currently displayed image. Often the setup boxes will have
+        to be quite small parallel to the edge they align, and thick
+        perpendicular to this on the initial align to satisfy the conditions
+        above. In this instance running Auto Align a second time with a
+        tighter, longer setup box will further improve the alignment.<br/>
+        <br/>
+        Note that the algorithm only works on straight edges. It is not
+        intended as a replacement for manual alignment, but may provide an
+        effective 'first pass'. It does not take into account any 'scale
+        errors' in images.<br/>
+        <br/>
+        If any of the images are very poorly aligned, the 'Reset Image' button
+        will return the image to its original position.<br/>
+    </p>
+    <hr/>
+    <p>
+        2.04<br/>
+        <br/>
+        - Fixed installer bug (installing wrong version of QT libraries)<br/>
+        <br/>
+        SPIERSEdit<br/>
+        ----------<br/>
+        <br/>
+        - Fixed bugs in slice deskewing mechanism<br/>
+        <br/>
+        <br/>
+        SPIERSView<br/>
+        ----------<br/>
+        <br/>
+        - Fixed bugs in slice deskewing mechanism<br/>
+        - Added an arbitrary rescale command<br/>
+    </p>
+    <hr/>
+    <p>
+        2.03<br/>
+        <br/>
+        <br/>
+        SPIERSEdit<br/>
+        ----------<br/>
+        <br/>
+        - Fixed bug that sometimes caused crash when creating new datasets<br/>
+        <br/>
+        - Bug has come to light eith new export system (see 2.02 below). Not
+        yet cured - as a stopgap a menu option to use the old output system has
+        been added - tick this if you experience crashes<br/>
+    </p>
+    <hr/>
+    <p>
+        2.02<br/>
+        <br/>
+        <br/>
+        SPIERSAlign<br/>
+        -----------<br/>
+        <br/>
+        - Minor bug-fixes<br/>
+        <br/>
+        - You are now allowed to add files to the end of a dataset after you
+        have starting aligning<br/>
+        <br/>
+        - Info box added<br/>
+        <br/>
+        - Automated markers system introduced. Place markers as previously,
+        then when enabled a grid appears over these and the image. The grid and
+        markers can then be manipulated to match a new slice. When this is done
+        AM:Align (alt-a) aligns the slice based on the grid and marker
+        positions.<br/>
+        <br/>
+        <br/>
+        SPIERSView<br/>
+        ----------<br/>
+        <br/>
+        - New transparency level (lowish)<br/>
+        <br/>
+        - Basic clip-planes system implemented (for virtual sectioning). Use
+        'Clip Controls' from view menu.<br/>
+        <br/>
+        - 'Remove piece' menu item added.<br/>
+        <br/>
+        - Optimisations for loading large files - surfacing time for files
+        exported from new version of SPIERSedit should by considerably
+        lower<br/>
+        <br/>
+        <br/>
+        SPIERSEdit<br/>
+        ----------<br/>
+        <br/>
+        - F12 keyboard shortcut restored for 'View in SPIERSview' (PC only)<br/>
+        <br/>
+        - Width problem with docker windows fixed (would sometimes appear too
+        wide when docked - they are now all locked to a fixed width at all
+        times)<br/>
+        <br/>
+        - Export progress bar is now by file not by object - should be more
+        use.<br/>
+        <br/>
+        - Export will be faster in most cases, especially for very large
+        datasets.<br/>
+        <br/>
+        - Export also now has a memory - if you do a subsequent export only
+        slices that have changed will be processed - this should result in huge
+        speedups if you make small changes and re-render. Note that some
+        operations will reset this cache- notably grouping/ungrouping objects,
+        merging/unmerging objects, changing resampling, creating new output
+        objects, creating or deleting segments, activating or deactivating
+        segments, or changing the dowsampling or mirroring of the output.<br/>
+    </p>
+    <hr/>
+    <p>
+        2.01 - first release with updater<br/>
+        <br/>
+    </p>
+    <p class="cent"><br/><img src="images/logo.png"/></p>
+</div>
+</body>
+</html>
+
