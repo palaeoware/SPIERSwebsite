@@ -3007,9 +3007,10 @@ article.special {
     text-align: center;
 }
 
+/* RJG - custom date span - used for lists of links */
 .date {
     display: block;
-    font-size: 0.8rem;
+    font-size: 1.0rem;
     height: 1;
     margin: 0 0 1rem 0;
     position: relative;
@@ -3023,7 +3024,7 @@ article.special {
     top: 50%;
     width: calc(50% - 6rem);
     border-top: solid 1px;
-    color: #252525;
+    color: #e2e2e2;
 }
 
 .date:before {
@@ -3471,7 +3472,7 @@ body.is-preload #wrapper.fade-in:before {
 #intro h4,
 #intro h5,
 #intro h6 {
-    color: #252525;
+    color: #ffffff;
     ;
 }
 
