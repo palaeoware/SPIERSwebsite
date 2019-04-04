@@ -1,2 +1,2 @@
-2.20
-https://www.spiers-software.org/downloads/binaries/spiers_2.20_setup.exe
+3.0
+https://github.com/palaeoware/SPIERS/releases/download/v3.0.0/SPIERSinstaller_v3.0.0_win_x64.exe
