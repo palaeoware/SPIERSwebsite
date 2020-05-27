@@ -1,2 +1,2 @@
-2.14
-https://www.spiers-software.org/downloads/binaries/spiers_osx_214.pkg
+3.1
+https://github.com/palaeoware/SPIERS/releases/download/v3.1.0/SPIERS_3.1.0_macOS.zip
